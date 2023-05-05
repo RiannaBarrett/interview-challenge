@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(https://t4.ftcdn.net/jpg/05/66/28/07/360_F_566280706_eiXaJ42KczBn8H0xrSGFyuLc04yzFYNC.jpg);
+    background-size: cover;
+    color: #333;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+/* header */
+  header {
+    background-color: rgb(196, 170, 135);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    max-width: 960px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+.nav-bar {
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  .searchbar input[type="text"] {
+    border-radius: 15px;
+    border: none;
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+  .searchbar input[type="text"]:focus {
+    outline: none;
+  }
+  /* section */
+  #mylist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  article {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin: 0.5rem 0;
+  }
+.books{
+    padding: 4rem 1.5rem;
+}
+.movies{
+    padding: 4rem 1.5rem;
+}
+
+/* footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  flex-shrink: 0;
+}
+
+
+/* Style for mobile devices */
+@media screen and (max-width: 600px) {
+    #mylist article {
+      width: 100%;
+    }
+}
+  
+  /* Style for larger screens  */
+@media screen and (min-width: 601px) {
+    #mylist article {
+      width: 100%;
+      display: inline-block;
+      margin: 1%;
+    }
+}

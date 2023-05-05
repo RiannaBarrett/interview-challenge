@@ -6,5 +6,56 @@
         TODO: Make the list responsive so that it displays as a single column on mobile devices and as a grid on larger screens. (will also be in index.css)
 -->
 
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type= "text/css" href="index.css">
+    <script src="index.js"></script>
+    <title>Favorite Books and Movies</title>
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+                <div id="main-header" class="container"> 
+                    <h1>My Favorite Books And Movies</h1>
+                </div>
+                <div id="search" class="searchbar">
+                    <input id="searchbar" onkeyup="search()" type="text"
+                    name="search" placeholder="Search...">
+        </div>
+        </div>
+    </header>
+    <section id="mylist" class="mylist">
+        <article> 
+            <h2>My Favorite Books</h2>
+            <ul>
+                <li>Harry Potter and the Chambers of Secrets</li>
+                <li>Jane Eyre</li>
+                <li>To Kill a Mockingbird</li>
+            </ul>
+    
+    </article>
+    <article>
+            <h2>My Favorite Movies</h2>
+            <ul>
+                <li>Tenet</li>
+                <li>Space Between Us</li>
+                <li>Lucy</li>
+                <li>The Martian</li>
+                <li>Interstellar</li>
+                <li>The Internship</li>
+            </ul>
+    </article>
+    </section>
+    
+    
+    <footer>
+        <div class="footer">
+            <h5>Made by Rianna Barrett</h5>
+        </div>
+    </footer>
+</body>
+</html>

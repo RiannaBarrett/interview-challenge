@@ -15,3 +15,46 @@
         TODO: Process the received JSON data and create an HTML structure dynamically using JavaScript.
         TODO: Render the list of items on the page, replacing the static content from Challenge 1.
         TODO: Ensure that the search functionality from Challenge 2 still works with the dynamically generated content. */
+
+        function search() {
+            let input = document.getElementById("searchbar").value.toLowerCase();
+            let items = document.querySelectorAll(".mylist li");
+          
+            items.forEach(function (item) {
+              if (item.innerHTML.toLowerCase().indexOf(input) > -1) {
+                item.style.display = "";
+              } else {
+                item.style.display = "none";
+              }
+            });
+          }
+          
+          //fetch api to retrieve data
+          fetch("https://alouderback.github.io/Data/db.json")
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
+            function renderList(books, movies) {
+              const booksList = document.querySelector("#books-list");
+              const moviesList = document.querySelector("#movies-list");
+            
+              // Clear previous content
+              booksList.innerHTML = "";
+              moviesList.innerHTML = "";
+            
+              // Render books list
+              books.forEach((book) => {
+                const li = document.createElement("li");
+                li.textContent = book.title;
+                booksList.appendChild(li);
+              });
+            
+              // Render movies list
+              movies.forEach((movie) => {
+                const li = document.createElement("li");
+                li.textContent = movie.title;
+                moviesList.appendChild(li);
+              });
+            }
+            
+            
